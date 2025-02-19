@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 import { ReduxProvider } from "@/store/providers";
 
 export const metadata: Metadata = {
-  title: "My App",
+  title: "AO Pro Navigator & Segmentation  for Allocation",
   description: "...",
 };
 

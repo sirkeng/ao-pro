@@ -1,5 +1,3 @@
-// /store/features/employeeSlice.ts
-
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "..";
 import {
@@ -52,7 +50,7 @@ const employeeSlice = createSlice({
 
 export default employeeSlice.reducer;
 
-// selectors
+// selectors ที่มีอยู่แล้ว
 export const selectEmployeeList = (state: RootState) => state.employee.list;
 export const selectEmployeeLoading = (state: RootState) =>
   state.employee.loading;
