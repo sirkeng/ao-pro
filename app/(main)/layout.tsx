@@ -24,7 +24,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Topbar />
-        <main className="p-4 bg-gray-50">{children}</main>
+        <main className="p-4 bg-gray-50 h-full">{children}</main>
       </div>
     </div>
   );
