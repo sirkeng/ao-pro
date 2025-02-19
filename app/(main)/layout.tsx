@@ -26,11 +26,11 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   }, [role, router]);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex h-screen">
       <Sidebar funtion={handleSelectMenu} select={selectmenu}/>
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col h-full">
         <Topbar />
-        <main className="p-4 bg-gray-50">{children}</main>
+        <main className="p-4 bg-[#EDF1F5] h-full overflow-auto">{children}</main>
       </div>
     </div>
   );

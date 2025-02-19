@@ -30,11 +30,11 @@ export default function MainLayout({ children }: MainLayoutProps) {
   }, [role, pathname, router]);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex h-screen">
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Topbar />
-        <main className="p-4">{children}</main>
+        <main className="p-4 ">{children}</main>
       </div>
     </div>
   );

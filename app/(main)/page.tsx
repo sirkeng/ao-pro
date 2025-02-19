@@ -10,7 +10,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1 className="text-xl font-bold">
+      <h1 className="text-xl font-bold text-black">
         Hi, Welcome to AO Pro Navigator & Segmentation For Allocation
       </h1>
       <p>Please select the system you want to use.</p>
