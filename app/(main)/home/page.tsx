@@ -1,11 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store";
 
 export default function HomePage() {
-  const role = useSelector((state: RootState) => state.user.role);
-
   const listlink = {
     data: [
       {
@@ -21,7 +17,7 @@ export default function HomePage() {
         allow: ["manager", "senior"],
       },
     ],
-  }
+  };
 
   return (
     <div className="p-4 " style={{ height: "calc(100vh - 4rem)" }}>
@@ -33,18 +29,29 @@ export default function HomePage() {
       </p>
 
       <div className="flex gap-8 w-full h-[auto] flex-wrap justify-center items-center mt-10">
-        {listlink.data.map((item, index) => {
+        {listlink.data.map((item) => {
           return (
-            <>
-              <Link href={item?.link} className="flex flex-col bg-[#0F0F2F] rounded-xl shadow w-[100%] h-[100%] items-center justify-center  text-center max-w-[500px] min-w-[150px] max-h-[1000px] min-h-[350px] 
+            <Link
+              key={item.link}
+              href={item?.link}
+              className="flex flex-col bg-[#0F0F2F] rounded-xl shadow w-[100%] h-[100%] items-center justify-center  text-center max-w-[500px] min-w-[150px] max-h-[1000px] min-h-[350px] 
                 hover:scale-105 duration-300 ease-in-out transition-all transform select-none cursor-pointer
                 hover:drop-shadow-lg
-              ">
-                <img src="image/Logo.svg" alt="Logo" className="w-[70px] cursor-pointer"></img>
-                <label className="text-white text-3xl font-semibold mt-4 cursor-pointer">{item?.name}<label className="text-yellow-400 cursor-pointer">{item?.name2}</label></label>
-              </Link>
-            </>
-          )
+              "
+            >
+              <img
+                src="image/Logo.svg"
+                alt="Logo"
+                className="w-[70px] cursor-pointer"
+              ></img>
+              <label className="text-white text-3xl font-semibold mt-4 cursor-pointer">
+                {item?.name}
+                <label className="text-yellow-400 cursor-pointer">
+                  {item?.name2}
+                </label>
+              </label>
+            </Link>
+          );
         })}
       </div>
 
